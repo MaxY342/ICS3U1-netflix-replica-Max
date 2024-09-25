@@ -1,0 +1,63 @@
+body {
+    background-color: black;
+}
+
+.sidebarbtn {
+    background-color: #252525;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    text-decoration: underline;
+    z-index: 1;
+    position: relative;
+}
+
+.sidebar {
+    position: relative;
+    display: inline-block;
+}
+
+.sidebar-content {
+    display: none;
+    position: fixed;
+    background-color: #444444;
+    width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+.sidebar-content a {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+}
+
+.sidebar:hover .sidebar-content {
+    display: block;
+    animation-name: slide;
+    animation-duration: 2s;
+}
+
+@keyframes slide {
+    from {width: 0px;}
+    to {width: 300px;}
+}
+
+.sidebar:hover .sidebarbtn {
+    background-color: #353535
+}
+
+.sidebar-content a:hover {
+    background-color: #4f4f4f;
+}
+
+.sidebar:hover ~ .header, .sidebar:hover ~ .text-block, .sidebar:hover ~ nav {
+    opacity: 0.5;
+}
