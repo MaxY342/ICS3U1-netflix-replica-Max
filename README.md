@@ -10,4 +10,4 @@ A replica website of netflix
     - feature section (showcases 3+ movie posters that can be rented)
     - footer section
 3. Use an external CSS to style your webpage.
-4. You will be graded on effort,
+4. You will be graded on effort, style and correctness.
