@@ -1,5 +1,10 @@
 body {
-    background-color: black;
+    background-color: #151515;
+    margin: 0;
+}
+
+.topbar {
+    display: grid;
 }
 
 .sidebarbtn {
@@ -8,14 +13,13 @@ body {
     padding: 10px;
     font-size: 16px;
     border: none;
-    text-decoration: underline;
     z-index: 1;
-    position: relative;
 }
 
 .sidebar {
     position: relative;
     display: inline-block;
+    width: 50px;
 }
 
 .sidebar-content {
@@ -26,11 +30,9 @@ body {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 3;
     top: 0;
-    left: 0;
     height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow: auto;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .sidebar-content a {
@@ -40,9 +42,10 @@ body {
 }
 
 .sidebar:hover .sidebar-content {
-    display: block;
+    display: grid;
     animation-name: slide;
-    animation-duration: 2s;
+    animation-duration: 1s;
+    grid-template-rows: 50px 50px 50px 50px;
 }
 
 @keyframes slide {
@@ -50,7 +53,7 @@ body {
     to {width: 300px;}
 }
 
-.sidebar:hover .sidebarbtn {
+.sidebarbtn:hover {
     background-color: #353535
 }
 
@@ -58,6 +61,21 @@ body {
     background-color: #4f4f4f;
 }
 
-.sidebar:hover ~ .header, .sidebar:hover ~ .text-block, .sidebar:hover ~ nav {
+.sidebar:hover ~ * {
     opacity: 0.5;
+}
+
+.hook-container {
+    padding: 12rem;
+    background-color: #252525;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 10vh;
+}
+
+* {
+    transition: opacity 1s ease;
 }
