@@ -1,6 +1,7 @@
 body {
     background-color: #151515;
     margin: 0;
+    height: 300vh;
 }
 
 .topbar {
@@ -19,7 +20,7 @@ body {
 .sidebar {
     position: relative;
     display: inline-block;
-    width: 50px;
+    width: 0px;
 }
 
 .sidebar-content {
@@ -66,16 +67,24 @@ body {
 }
 
 .hook-container {
-    padding: 12rem;
-    background-color: #252525;
-}
-
-h1 {
-    color: white;
-    text-align: center;
-    font-size: 10vh;
-}
-
-* {
+    background-color: #2f2f2f;
+    position: relative;
+    padding: 14rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: opacity 1s ease;
 }
+
+* :not(h1) {
+    transition: opacity 1s ease;
+}
+
+.hook {
+    color: white;
+    font-size: 10vh;
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+}
+
