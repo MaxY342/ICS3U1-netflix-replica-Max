@@ -6,10 +6,19 @@ body {
 
 .topbar {
     display: grid;
+    grid-template-columns: auto 900px auto auto;
 }
 
-.sidebarbtn {
-    background-color: #252525;
+.sign-in-btn {
+    grid-column: 3/3;
+}
+
+.log-in-btn, .sign-in-btn {
+    margin-left: 10px;
+}
+
+.sidebarbtn, .sign-in-btn, .log-in-btn {
+    background-color: #191919;
     color: white;
     padding: 10px;
     font-size: 16px;
@@ -54,7 +63,7 @@ body {
     to {width: 300px;}
 }
 
-.sidebarbtn:hover {
+.sidebarbtn:hover, .sign-in-btn:hover, .log-in-btn:hover {
     background-color: #353535
 }
 
@@ -62,14 +71,14 @@ body {
     background-color: #4f4f4f;
 }
 
-.sidebar:hover ~ * {
+.topbar:hover ~ * {
     opacity: 0.5;
 }
 
 .hook-container {
     background-color: #2f2f2f;
     position: relative;
-    padding: 14rem 1rem;
+    padding: 18rem 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,5 +95,16 @@ body {
     position: fixed;
     text-align: center;
     z-index: 1;
+}
+
+.text-block {
+    z-index: 2;
+    background-color: #151515;
+    color: white;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    padding: 30px;
 }
 
