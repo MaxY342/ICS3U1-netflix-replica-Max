@@ -5,14 +5,14 @@ body {
 
 .topbar {
     display: grid;
-    grid-template-columns: auto 1fr auto auto;
+    grid-template-columns: auto auto 1fr auto auto;
     gap: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 .sign-in-btn {
-    grid-column: 3/3;
+    grid-column: 4/4;
 }
 
 .sidebarbtn, .sign-in-btn, .log-in-btn {
@@ -27,7 +27,6 @@ body {
 .sidebar {
     position: relative;
     display: inline-block;
-    width: 0px;
 }
 
 .sidebar-content {
@@ -102,7 +101,7 @@ body {
     position: relative;
     text-align: center;
     font-size: 20px;
-    padding: 30px;
+    padding: 40px 100px;
 }
 
 .text-block-left {
@@ -112,11 +111,13 @@ body {
     display: inline-block;
     position: relative;
     font-size: 20px;
-    padding: 30px;
+    padding: 40px 100px;
 }
 
-.featured-section {
-    
+.featured-section-content {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
 }
 
 .footer {
@@ -131,4 +132,11 @@ body {
 
 p {
     margin: 0;
+}
+
+.logo {
+    margin: 0;
+    grid-column: 2/2;
+    color: red;
+    margin-left: 20px;
 }
